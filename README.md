@@ -19,21 +19,21 @@ source htb_venv/bin/activate
 ## 🔴サブドメイン列挙
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r
-python3 sublist3r.py -d domain -o hoge_subdomains.txt
+python3 sublist3r.py -d ドメイン -o hoge_subdomains.txt
 
-ffuf -w -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://domain.com -mc 200 -fs 0
+ffuf -w -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://ドメイン -mc 200 -fs 0
 
 ## 🔴directory列挙
 
 dirb http://ドメイン/
 ffuf -u http://ドメイン/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -c -t 50
-gobuster dir -u http://domain/ -w /usr/share/wordlists/dirb/common.txt
-dirsearch -u http://domain/ -x 403,404,400  
+gobuster dir -u http://ドメイン/ -w /usr/share/wordlists/dirb/common.txt
+dirsearch -u http://ドメイン/ -x 403,404,400  
 
 ## 🔴ユーザー列挙
 
 ffuf -w /usr/share/wordlists/seclists/Usernames/Names/names.txt \
-     -u "http://nocturnal.htb/view.php?username=FUZZ&file=file.pdf" \
+     -u "http://ドメイン/view.php?username=FUZZ&file=file.pdf" \
      -H "Cookie: PHPSESSID=xxx" \
      -fr "User not found."
 
