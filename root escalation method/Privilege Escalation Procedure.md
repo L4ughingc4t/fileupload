@@ -84,7 +84,7 @@ getcap -r / 2>/dev/null
 
 cap_setuid などがついていれば昇格に使える可能性あり。
 
-###TTYを使ったシェルの安定化（Python）
+### TTYを使ったシェルの安定化（Python）
 
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 
