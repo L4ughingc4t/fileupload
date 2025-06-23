@@ -1,0 +1,26 @@
+FF D8 FF                                      # JPEG
+89 50 4E 47 0D 0A 1A 0A                       # PNG
+47 49 46 38 37 61                             # GIF87a
+47 49 46 38 39 61                             # GIF89a
+42 4D                                        # BMP
+52 49 46 46                                  # RIFF (WEBP, AVI, etc)
+
+25 50 44 46 2D                                # PDF ("%PDF-")
+50 4B 03 04                                   # ZIP / DOCX / XLSX / PPTX
+50 4B 05 06                                   # Empty ZIP archive (EOF)
+50 4B 07 08                                   # Spanned ZIP
+
+D0 CF 11 E0 A1 B1 1A E1                        # DOC / XLS / PPT (旧Office)
+7F 45 4C 46                                   # ELF (Linux実行バイナリ)
+4D 5A                                        # MZ (Windows EXE/DLL)
+CA FE BA BE                                   # Java class (Big endian)
+EF BB BF                                      # UTF-8 with BOM
+FF FE                                         # UTF-16 LE
+FE FF                                         # UTF-16 BE
+
+52 61 72 21 1A 07 00                          # RAR (v1.5 - v4.0)
+52 61 72 21 1A 07 01 00                       # RAR5
+37 7A BC AF 27 1C                             # 7-Zip
+
+23 21                                          # シバン（#!/usr/bin/env pythonなど）
+3C 3F 70 68 70                                # "<?php" (PHP script)
