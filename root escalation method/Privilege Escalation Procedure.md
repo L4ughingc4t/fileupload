@@ -9,7 +9,7 @@ sudo BASH_ENV=/tmp/exp.sh /usr/bin/systeminfo
 
 c. 🧯 環境変数が継承されない場合
 sudo -s
-# または
+または
 sudo -i
 
 d. 📝 sudo で実行できるエディタやインタプリタの利用
