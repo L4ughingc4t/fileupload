@@ -20,6 +20,35 @@ python3 -m venv ~/venv/tf
 
 source ~/venv/tf/bin/activate
 
+## 🔴Dockerが必要な場合
+
+sudo apt update
+
+sudo apt install -y docker.io
+
+sudo systemctl start docker
+
+sudo systemctl enable docker
+
+sudo docker run hello-world
+
+sudo usermod -aG docker $USER
+
+newgrp docker
+
+## 🔴pwntools
+
+sudo apt update
+
+sudo apt install -y python3-pip python3-dev libssl-dev libffi-dev build-essential
+
+pip3 install --upgrade pip
+
+pip3 install pwntools
+
+python3 -c "from pwn import *; print('pwntools is installed')"
+
+
 
 ## 🔴サブドメイン列挙
 git clone https://github.com/aboul3la/Sublist3r.git
