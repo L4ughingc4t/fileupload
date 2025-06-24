@@ -6,18 +6,19 @@
 ## 🔴仮想pipinstallが必要な場合
 
 ### 1. directory作成
+sudo apt update
 
-mkdir -p ~/htb_env
+sudo apt install python3-venv python3-pip -y
 
-cd ~/htb_env
+mkdir -p ~/venv/tf
 
 ### 2. 仮想環境を作成（Python3のvenvモジュール使用）
 
-python3 -m venv htb_venv
+python3 -m venv ~/venv/tf
 
 ### 3. 仮想環境を有効化
 
-source htb_venv/bin/activate
+source ~/venv/tf/bin/activate
 
 
 ## 🔴サブドメイン列挙
