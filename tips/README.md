@@ -34,6 +34,10 @@
 
 [🔵tools](#tools)
 
+[impacket](#impacket)
+
+[winpeas](#winpeas)
+
 ## 🔴nmap
 
 ## 🔴hosts設定
