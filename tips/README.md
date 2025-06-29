@@ -82,7 +82,8 @@ C:\> where /r C:\ user.txt
 ```
 ### linux
 ```
-find /home -name "user.txt" 2>/dev/null
+find / -name "user.txt" 2>/dev/null
+find / -name root.txt 2>/dev/null
 ```
 ## 🔴SSHコマンド
 ```
