@@ -26,7 +26,7 @@
 
 [🔴サーバ](#サーバ)
 
-[🔴Privilege escalation to root](#Privilege escalation to root)
+[🔴Privilege escalation to root](#privilege-escalation-to-root)
 
 [🔴hoge](#)
 
