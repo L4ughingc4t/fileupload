@@ -222,7 +222,7 @@ su: must be run from a terminal
 ```
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
-🔹 2. Bash 経由でのシェル強化
+🔹 2. Bash 経由でのシェル強化（pythonが使えない時）
 ```
 script /dev/null -c bash
 ```
