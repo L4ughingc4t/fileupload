@@ -1,4 +1,4 @@
-# payloads
+# tips
 
 ## 🔴nmap
 ## 🔴hosts設定
