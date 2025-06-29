@@ -1,7 +1,7 @@
 <?php
 /**
  * Custom PHP Reverse Shell
- * Author: @L4ughingc4t
+ * Author: @L4ughingc4t(2025.06.30)
  * Based on ideas from pentestmonkey.net
  * License: For educational or authorized testing purposes only
  */
