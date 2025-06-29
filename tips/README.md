@@ -1,9 +1,41 @@
 # tips
 # 目次
-[🔴nmap](#-nmap)
+[🔴nmap](#nmap)
+
+[🔴hosts設定](#hosts設定)
+
+[🔴仮想pipinstallが必要な場合](#仮想pipinstallが必要な場合)
+
+[🔴Dockerが必要な場合](#dockerが必要な場合)
+
+[🔴pwntools](#pwntools)
+
+[🔴サブドメイン列挙](#サブドメイン列挙)
+
+[🔴directory列挙](#directory列挙)
+
+[🔴ユーザー列挙](#ユーザー列挙)
+
+[🔴ファイルのパスを検索](#ファイルのパスを検索)
+
+[🔴SSHコマンド](#SSHコマンド)
+
+[🔴SMB](#SMB)
+
+[🔴MSSQL](#MSSQL)
+
+[🔴サーバ](#サーバ)
+
+[🔴Privilege escalation to root](#Privilege escalation to root)
+
+[🔴hoge](#)
+
+[🔴hoge](#)
+
 [🔵tools](#tools)
 
 ## 🔴nmap
+
 ## 🔴hosts設定
 
 ## 🔴仮想pipinstallが必要な場合
