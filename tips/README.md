@@ -220,6 +220,7 @@ python3 mssqlclient.py ARCHETYPE/sql_svc@{TARGET_IP} -windows-auth
 Windows 環境における権限昇格の可能性を自動で調査するためのツール
 #### 1. Kaliなどから Windows に winPEAS をアップロード
 ```
+cd /usr/share/peass/winpeas
 python3 -m http.server 80  # Kali側
 # Windows側で certutil または powershell wget で取得
 ```
