@@ -111,7 +111,7 @@ put exploit.zip exploit.zip
 ```
 get file.txt
 ```
-## 🔴SQL
+## 🔴MSSQL
 ### ✅【1】現在のユーザーと権限の確認
 ```
 SELECT SYSTEM_USER;
