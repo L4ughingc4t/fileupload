@@ -215,6 +215,17 @@ $debug = 0;
 <SNIP>
 ?>
 ```
+#### shell接続後エラー解消
+su: must be run from a terminal
+
+🔹 1. Pythonを使って擬似TTY付きでシェルを生成
+```
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+```
+🔹 2. Bash 経由でのシェル強化
+```
+script /dev/null -c bash
+```
 
 # 🔵tools
 
