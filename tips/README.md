@@ -122,3 +122,14 @@ get file.txt
 
 ## 🔴tools
 
+### impacket
+
+git clone https://github.com/fortra/impacket.git
+
+sudo python3 setup.py install
+
+#### mssqlclient.py
+MSSQL サーバ（TCP 1433）へログインして、SQL クエリを実行できるツール
+
+python3 mssqlclient.py ARCHETYPE/sql_svc@{TARGET_IP} -windows-auth
+
