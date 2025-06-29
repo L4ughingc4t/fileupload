@@ -1,7 +1,7 @@
 # tips
 # 目次
 [🔴nmap](#-nmap)
-[🔵tools](#-tools)
+[🔵tools](#tools)
 
 ## 🔴nmap
 ## 🔴hosts設定
